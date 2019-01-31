@@ -1,0 +1,30 @@
+<% include partials/header %>
+    <div class="container">
+        <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Job Title</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% users.forEach( (user) => { %>
+            <tr>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td><%= user.mobile %></td>
+                <td><%= user.jobTitle %></td>
+                <td><button class='btn btn-warning btn-md'>Update</button></td>
+                <td><button class='btn btn-danger btn-md'>Delete</button></td>
+            </tr>
+        <% }) %>
+        </tbody>
+        </table>
+        <br>
+        <a class='btn btn-primary btn-lg' href='/users/new'>Add New User</a>
+    </div>
+<% include partials/footer %>
